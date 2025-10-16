@@ -7,8 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/mizam-icon.png">
-    <link rel="stylesheet" href="/mariam-akerele-portfolio/output.css"/>
-    <script src="/mariam-akerele-portfolio/js/js_theme.js" defer></script>
+    <script>
+      // Prevents FOUC (Flash of Unstyled Content)
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+    <link rel="stylesheet" href="output.css"/>
+    <script src="js/js_theme.js" defer></script>
 </head>
 <body class="theme-transition bg-white text-gray-900 dark:bg-[#0D0D0D] dark:text-gray-100">
     <header class="flex justify-between items-center px-4 py-6 mx-auto sticky top-0 z-50 border-b dark:border-[#444] border-[#4a5568] w-full dark:bg-[#0D0D0D] bg-white">
@@ -174,7 +182,7 @@
 
                <!-- Download Resume -->
                 <div class="text-center mt-16">
-                    <a href="/mariam-akerele-portfolio/cv/my_cv.pdf" class="inline-block text-teal-600 hover:text-white rounded-lg px-6 py-4 whitespace-nowrap hover:bg-teal-600 transition-all duration-300 font-['inter', sans-serif] font-medium shadow-xl border border-teal-600 hover:scale-150 " download="Mariam_Akerele_Resume.pdf">Download PDF Resume</a>
+                    <a href="/cv/my_cv.pdf" class="inline-block text-teal-600 hover:text-white rounded-lg px-6 py-4 whitespace-nowrap hover:bg-teal-600 transition-all duration-300 font-['inter', sans-serif] font-medium shadow-xl border border-teal-600 hover:scale-150 " download="Mariam_Akerele_Resume.pdf">Download PDF Resume</a>
                 </div>
             </div>
 
