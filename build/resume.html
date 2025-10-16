@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/mizam-icon.png">
     <link rel="stylesheet" href="output.css"/>
+    <script src="js/js_theme.js" defer></script>
 </head>
-<body class="bg-white text-gray-900 dark:bg-[#0D0D0D] dark:text-gray-100">
+<body class="theme-transition bg-white text-gray-900 dark:bg-[#0D0D0D] dark:text-gray-100">
     <header class="flex justify-between items-center px-4 py-6 mx-auto sticky top-0 z-50 border-b dark:border-[#444] border-[#4a5568] w-full dark:bg-[#0D0D0D] bg-white">
         <section class="flex justify-between items-center gap-[40px] mx-auto w-full max-w-[75rem]">
         <!-- My Brand -->
@@ -25,8 +26,8 @@
             <a class="hover:text-[#9ca3af]  transition-all duration-300" href="contact.html">Contact</a>
         </nav>
         <!-- Dark Mode Toggle -->
-        <button type="button" class="theme-toggle mr-4 w-[40px] h-[40px] rounded-full bg-teal-600 hover:bg-teal-700 border border-[#9ca3af] transition-all duration-300 hover:rotate-180">
-            <span class="toggle-icon text-[20px] ">◐</span>
+        <button id="theme-toggle" type="button" class="theme-toggle mr-4 w-[40px] h-[40px] rounded-full bg-teal-600 hover:bg-teal-700 border border-[#9ca3af] transition-all duration-300 hover:rotate-180">
+            <i id="theme-icon" class="fa-solid fa-moon text-[20px]"></i>
         </button>
         </section>
     </header>
@@ -173,7 +174,7 @@
 
                <!-- Download Resume -->
                 <div class="text-center mt-16">
-                    <a href="/cv/my_cv.pdf" class="inline-block text-teal-600 hover:text-white rounded-lg px-6 py-4 whitespace-nowrap hover:bg-teal-600 transition-all duration-300 font-['inter', sans-serif] font-medium shadow-xl border border-teal-600 hover:scale-150 " download="Mariam_Akerele_Resume.pdf">Download PDF Resume</a>
+                    <a href="cv/my_cv.pdf" class="inline-block text-teal-600 hover:text-white rounded-lg px-6 py-4 whitespace-nowrap hover:bg-teal-600 transition-all duration-300 font-['inter', sans-serif] font-medium shadow-xl border border-teal-600 hover:scale-150 " download="Mariam_Akerele_Resume.pdf">Download PDF Resume</a>
                 </div>
             </div>
 

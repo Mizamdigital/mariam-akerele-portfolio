@@ -67,5 +67,10 @@
     .animation-delay-400 {
         animation-delay: 0.4s;
     }
+
+
+    .theme-transition {
+    @apply transition-colors duration-500 ease-in-out;
+  }
     
 }
