@@ -22,3 +22,33 @@ themeToggle.addEventListener("click", () => {
   localStorage.setItem("theme", newTheme);
   applyTheme(newTheme);
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const icon = menuButton ? menuButton.querySelector('i') : null;
+
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+                // Toggle visibility of the mobile menu
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex'); // Use flex to display items horizontally
+
+                // Toggle Icon (Hamburger <-> X)
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-xmark');
+                }
+            });
+
+            // Optional: Close menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu.classList.contains('flex')) {
+                        menuButton.click(); // Simulate button click to close
+                    }
+                });
+            });
+        }
+    });
